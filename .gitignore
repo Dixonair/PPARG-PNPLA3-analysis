@@ -1,0 +1,8 @@
+data/
+results/
+inputs/
+ref/
+__pycache__/
+*.bam
+*.bw
+.DS_Store

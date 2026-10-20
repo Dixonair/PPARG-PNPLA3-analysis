@@ -1,0 +1,24 @@
+name: pparg_hepg2
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  - fastp
+  - bowtie2
+  - samtools
+  - macs3
+  - deeptools
+  - pysam
+  - pip
+  - pip:
+      - pyBigWig
+      - pandas
+      - numpy
+      - scipy
+      - statsmodels
+      - matplotlib
+      - openpyxl
+      - pydeseq2        # optional: liver sensitivity table in step 00
+# A separate environment from environment.yml (GSE115421 uses MACS2 < 2.2.9; HepG2 uses MACS3).
+# Record exact versions before release: conda env export > environment_hepg2.lock.yml

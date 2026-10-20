@@ -1,0 +1,30 @@
+name: pparg_pnpla3
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  - sra-tools
+  - fastp
+  - bowtie2
+  - samtools
+  - bedtools
+  - macs2<2.2.9          # 2.2.9.1 has a broken build (undefined symbol __log_finite)
+  - deeptools
+  - poppler              # pdftoppm, used by scripts/figures_tables/09_rearranged_figure6.py
+  - pip
+  - pip:
+      - pyBigWig
+      - pandas
+      - numpy
+      - scipy
+      - statsmodels
+      - matplotlib
+      - pillow
+      - python-docx
+      - gseapy
+# R (>= 4.2) packages, installed separately:
+#   CRAN:         dplyr, ggplot2, pheatmap, igraph, ggraph (network plots), data.table, readxl, msigdbr
+#   Bioconductor: DESeq2, limma, fgsea, clusterProfiler, org.Hs.eg.db, org.Mm.eg.db, ChIPseeker,
+#                 TxDb.Hsapiens.UCSC.hg38.knownGene, GSVA, pathview, enrichplot
+# Record the exact versions you used with sessionInfo() (R) and `conda env export` (Python/CLI) before release.
